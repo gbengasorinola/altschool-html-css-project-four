@@ -1,0 +1,306 @@
+:root {
+  --bg-color: #ffffff;
+  --color-1: white;
+  --color-2: green;
+  --p-color: #737373;
+  --h1-color: #000b0a;
+  --label-color: #011c34;
+  --button-color: #2ec4b6;
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url(../fonts/sofia-pro/Sofia\ Pro\ Regular\ Az.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brown";
+  src: url(../fonts/Brown-Font/BrownLight\ Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  font-family: "Brown", "Sofia Pro", Calibri, "Trebuchet MS", sans-serif;
+  max-width: 1440px;
+  margin: auto;
+  background-color: var(--bg-color);
+}
+
+main {
+  display: flex;
+  max-width: 1360px;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 460px;
+  margin-right: 60px;
+}
+
+h1,
+p {
+  font-family: "Brown";
+}
+
+img {
+  position: relative;
+  left: -5px;
+  margin-bottom: auto;
+  width: 77.33px;
+  height: 80px;
+}
+
+h1 {
+  color: var(--h1-color);
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 30px;
+}
+
+p {
+  padding-top: 15px;
+  padding-right: 50px;
+  color: var(--p-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.opening-paragraph-mobile {
+  display: none;
+}
+
+.form-container {
+  font-family: "Sofia Pro";
+  background-color: var(--color-1);
+  border-radius: 6px;
+  margin-top: 50px;
+  max-width: 580px;
+  box-shadow: 0px 4px 50px 0px #0408131a;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 30px;
+  padding-top: 20px;
+  align-items: center;
+  gap: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--label-color);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+#gender {
+  font-family: "Sofia Pro";
+  box-sizing: border-box;
+  width: 238px;
+  height: 48px;
+  border: solid 0.1px rgb(218, 216, 216);
+  border-radius: 2px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  cursor: pointer;
+}
+
+input[type="date"] {
+  position: relative;
+  background: url("../icon/calendar.svg") no-repeat right 10px center;
+  background-size: 20px;
+} */
+
+::placeholder {
+  font-family: "Sofia Pro";
+  font-size: 14px;
+  font-weight: 300px;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+select,
+button,
+input[type="password"] {
+  font-family: "Sofia Pro";
+  box-sizing: border-box;
+  width: 500px;
+  height: 48px;
+  border: solid 0.1px rgb(218, 216, 216);
+  border-radius: 2px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+select,
+input[type="password"] {
+  padding-left: 10px;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  color: #737373;
+  font-family: "Sofia Pro";
+  font-size: 14px;
+  font-weight: 300px;
+
+  background: url(../icon/select.svg) no-repeat right 10px center;
+  background-size: 10.54px;
+}
+
+input[type="password"] {
+  background: url(../icon/show.svg) no-repeat right 10px center;
+}
+
+button {
+  font-family: "Sofia Pro";
+  margin-top: 20px;
+  color: white;
+  background-color: var(--button-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.20000000298023224px;
+  box-shadow: 0px 10px 40px 0px #0000001A;
+}
+
+button:hover {
+  background-color: black;
+}
+
+.policy-desktop {
+  font-family: "Sofia Pro";
+  text-align: center;
+  font-size: 13px;
+  padding: 5px 0;
+  padding-bottom: 30px;
+  margin: 0 20px;
+  margin-top: -20px;
+}
+
+.policy-mobile {
+  display: none;
+}
+
+span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  color: var(--button-color);
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    display: grid;
+  }
+
+  .page-text {
+    margin: 30px 20px;
+    margin-bottom: 10px;
+  }
+
+  img {
+    width: 38.67px;
+    left: 0;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  p {
+    padding: 0px;
+  }
+
+  .opening-paragraph-desktop {
+    display: none;
+  }
+
+  .opening-paragraph-mobile {
+    display: block;
+  }
+
+  .form-container {
+    margin: 20px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    place-items: center;
+  }
+
+  .form-grid {
+    display: block;
+    padding: 30px 20px;
+    padding-bottom: 0;
+  }
+
+  .full-width {
+    display: block;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  #gender {
+    width: 295px;
+    height: 48px;
+    margin-bottom: 25px;
+  }
+
+  select,
+  button,
+  input[type="password"] {
+    width: 295px;
+    height: 48px;
+    margin-bottom: 25px;
+  }
+
+  .policy-desktop {
+    display: none;
+  }
+
+  .policy-mobile {
+    display: block;
+    text-align: center;
+    padding: 0 25px;
+    padding-bottom: 60px;
+    font-family: Sofia Pro;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
